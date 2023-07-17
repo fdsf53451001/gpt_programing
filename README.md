@@ -1,35 +1,22 @@
-> **Note**
->
-> 2023.7.8: Gradio, Pydantic依赖调整，已修改 `requirements.txt`。请及时**更新代码**，安装依赖时，请严格选择`requirements.txt`中**指定的版本**
->
-> `pip install -r requirements.txt`
 
+# <div align=center><img src="docs/logo.png" width="40" > GPT 程序優化 (GPT Programing)</div>
 
-# <div align=center><img src="docs/logo.png" width="40" > GPT 学术优化 (GPT Academic)</div>
+這是延伸自GPT Academic的專案，目的是提供編成導向的GPT對話平台。主要功能包含代碼解析、代碼優化、代碼生成等。
 
-**如果喜欢这个项目，请给它一个Star；如果您发明了好用的快捷键或函数插件，欢迎发pull requests！**
+## 增加功能
+ 功能 | 描述
+--- | ---
+優化代碼 | 一鍵優化代碼，減少冗餘代碼
+代碼修正 | 自動debug，處理程式錯誤
+代码解释 | 显示代码、解释代码、生成代码、给代码加注释
+自我反思 |  [函数插件] 利用GPT-4自我反思能力，檢查前段輸出是否正確，並找出改進方法。
 
-If you like this project, please give it a Star. If you've come up with more useful academic shortcuts or functional plugins, feel free to open an issue or pull request. We also have a README in [English|](docs/README_EN.md)[日本語|](docs/README_JP.md)[한국어|](https://github.com/mldljyh/ko_gpt_academic)[Русский|](docs/README_RS.md)[Français](docs/README_FR.md) translated by this project itself.
-To translate this project to arbitary language with GPT, read and run [`multi_language.py`](multi_language.py) (experimental).
-
-> **Note**
->
-> 1.请注意只有 **高亮(如红色)** 标识的函数插件（按钮）才支持读取文件，部分插件位于插件区的**下拉菜单**中。另外我们以**最高优先级**欢迎和处理任何新插件的PR。
->
-> 2.本项目中每个文件的功能都在自译解[`self_analysis.md`](https://github.com/binary-husky/gpt_academic/wiki/chatgpt-academic%E9%A1%B9%E7%9B%AE%E8%87%AA%E8%AF%91%E8%A7%A3%E6%8A%A5%E5%91%8A)详细说明。随着版本的迭代，您也可以随时自行点击相关函数插件，调用GPT重新生成项目的自我解析报告。常见问题汇总在[`wiki`](https://github.com/binary-husky/gpt_academic/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)当中。[安装方法](#installation)。
-> 
-> 3.本项目兼容并鼓励尝试国产大语言模型ChatGLM和Moss等等。支持多个api-key共存，可在配置文件中填写如`API_KEY="openai-key1,openai-key2,api2d-key3"`。需要临时更换`API_KEY`时，在输入区输入临时的`API_KEY`然后回车键提交后即可生效。
-
-
- 
+## 其他GPT Academic功能
 
 <div align="center">
 
 功能 | 描述
 --- | ---
-一键润色 | 支持一键润色、一键查找论文语法错误
-一键中英互译 | 一键中英互译
-一键代码解释 | 显示代码、解释代码、生成代码、给代码加注释
 [自定义快捷键](https://www.bilibili.com/video/BV14s4y1E7jN) | 支持自定义快捷键
 模块化设计 | 支持自定义强大的[函数插件](https://github.com/binary-husky/gpt_academic/tree/master/crazy_functions)，插件支持[热更新](https://github.com/binary-husky/gpt_academic/wiki/%E5%87%BD%E6%95%B0%E6%8F%92%E4%BB%B6%E6%8C%87%E5%8D%97)
 [自我程序剖析](https://www.bilibili.com/video/BV1cj411A7VW) | [函数插件] [一键读懂](https://github.com/binary-husky/gpt_academic/wiki/chatgpt-academic%E9%A1%B9%E7%9B%AE%E8%87%AA%E8%AF%91%E8%A7%A3%E6%8A%A5%E5%91%8A)本项目的源代码
