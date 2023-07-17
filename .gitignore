@@ -150,3 +150,6 @@ request_llm/jittorllms
 multi-language
 request_llm/moss
 media
+
+# config file
+config.py

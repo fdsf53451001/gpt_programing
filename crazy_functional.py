@@ -24,9 +24,14 @@ def get_crazy_functions():
     from crazy_functions.对话历史存档 import 对话历史存档
     from crazy_functions.对话历史存档 import 载入对话历史存档
     from crazy_functions.对话历史存档 import 删除所有本地对话历史记录
-    
     from crazy_functions.批量Markdown翻译 import Markdown英译中
+    from crazy_functions.rethink_output import RethinkOutput
+
     function_plugins = {
+        "自我反思":{
+            "Color": "stop",    # 按钮颜色
+            "Function": HotReload(RethinkOutput)
+        },
         "解析整个Python项目": {
             "Color": "stop",    # 按钮颜色
             "Function": HotReload(解析一个Python项目)
